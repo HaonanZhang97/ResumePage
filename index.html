@@ -1,66 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Haonan's Resume</title>
-</head>
-<body>
-    <h1>Haonan Zhang</h1>
-    <img src="./public/IMG_4235.jpg" alt="Person Picture" height="200"/>
-    <p>
-        Computer Science Major<br/>
-        Ontario<br/>
-        raymondzhn@outlook.com<br/>
-        6132522649<br/>
-    </p>
-    <h2>Personal Highlights</h2>
-    <ul>
-        <li>Professional computer programming experience in the area of quality assurance, system testing, and software
-        development</li>
-        <li>Academic Achievements: Earned the Dean's Honour List for academic excellence (CGPA 9.82/12)</li>
-        <li>2 years' Java programming experience in performing software design and development, and system networking</li>
-        <li>2 years' hands-on SQL querying experience in performing relational database management and development</li>
-        <li>Practical experience in web design and development tools including Java (Spring Boot), JavaScript (Angular, React.js), CSS, HTML etc.</li>
-        <li>Technical expertise in Python programming (Numpy, Pandas); Fundamental knowledge in JSP, Redis, Docker, Postman etc.</li>
-        <li>Received the certificate of completion on technical training “Java Developer” course from Udemy.</li>
-        <li>In-depth software development knowledge in Recursion, Inheritance, Data Structures (lists, trees), Big-O Complexity Analysis</li>
-        <li>Extensive algorithm knowledge: Asymptotic Analysis, Dynamic Programming, Greedy Algorithms, Graph Algorithms</li>
-        <li>Willingness to learn & fast learner; A self-motivated, energetic, result-driven and hard-working team contributor</li>
-    </ul>
-    <hr/>
-    <h2>Education</h2>
-    <ul>
-        <li>Master of System Science, University of Ottawa, Ottawa, ON Graduation Date: December 2022
-            <ul>
-                <li>Interested Courses: System Engineering (A), System Optimization and Management (A), Enterprise Architecture (A)</li>
-                <li>Career Objectives: Software Development, Quality Assurance, Database Management, Automation, Testing</li>
-            </ul>
-        </li>
-        <li>Hon. Bachelor of Science, Major in Computer Science, Carleton University, Ottawa, ON Graduation Date: June 2021
-            <ul>
-                <li>Relevant Courses: Software Engineering, Computer Networks, Database Management,</li>
-                <li>Skills Set: Communication, Interpersonal, Problem Solving, Multi-tasking, Teamwork, Time management, Attention to Details</li>
-            </ul>
-        </li>
-    </ul>
-    <hr/>
-    <h2>Employment Experience</h2>
-    <ul>
-        <li><h3>Software Engineer (Remote), Community Dreams Foundation</h3>
-            <p>May 2023 - Present</p>
-        </li>
-        <li><h3>Software Developer Intern, Kanlan Technology</h3>
-            <p>May - August 2022</p>
-        </li>
-    </ul>
-    <hr/>
-    <h2>Other</h2>
-    <ul>
-        <li><a href="./public/about.html">About Me</a></li>
-        <li><a href="./public/contact.html"> Contact Me</a></li>
-    </ul>
-</body>
-<footer>
-    <small>© 2023 Haonan Zhang. All Rigths Reserved</small> </footer>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Indie+Flower&family=Libre+Baskerville&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="cover">
+      <div class="container mainpage">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md col-12">
+            <h1 class="display-1 fw-bold heading">Haonan Zhang</h1>
+            <h3 class="intro">I'm a programmer</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="px-4 py-5 my-5 text-center">
+      <img
+        class="d-block mx-auto mb-4"
+        src="./public/IMG_4235.jpg"
+        alt="Person Picture"
+        height="200"
+      />
+
+      <div class="col-lg-6 mx-auto">
+        <h3>Hello</h3>
+        <p class="lead mb-4 text">
+          I'm a new grad software developer looking for frontend, backend, full
+          stack jobs.<br />
+          Computer Science Major<br />
+          Ontario<br />
+          raymondzhn@outlook.com<br />
+          6132522649<br />
+        </p>
+      </div>
+    </div>
+    <div class="container myskills">
+      <div class="row text-center">
+        <h3 class=" fw-bold">My skills</h3>
+        <div class="skill">
+          <h4> Design and Development</h4>
+          <p>I found coding brings me a lot of joys. I first started learning coding when I was struggling with biology and chemistry and tried to change
+            online assignment questions into meanlingless nonsense. Over the time, I gained various experience designing and developing web applications and small programs. 
+          </p>
+        </div>
+        <div class="skill">
+          <h4> TBD </h4>
+          <p>Still working on it</p>
+        </div>
+      </div>
+    </div>
+    <div class="p-5 mb-4 bg-body-tertiary rounded-3 text-center">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Get in Touch</h1>
+        <h3> If you like what I do</h3>
+        <p class=" fs-4">Let's talk about it and create something more! We can have fun while coding!</p>
+        <a class="btn btn-primary btn-lg" href="./public/contact.html">Contact Me</a>
+      </div>
+    </div>
+    <div class="container">
+      <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item">
+            <a href="./index.html" class="nav-link px-2 text-body-secondary">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="./public/resume.html" class="nav-link px-2 text-body-secondary">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a href="./public/contact.html" class="nav-link px-2 text-body-secondary">Contact Me</a>
+          </li>
+          <li class="nav-item">
+            <a href="./public/about.html" class="nav-link px-2 text-body-secondary">About Me</a>
+          </li>
+                    <li class="nav-item">
+            <a href="https://www.linkedin.com/in/haonan-zhang-233605200/" class="nav-link px-2 text-body-secondary">Linkedin</a>
+          </li>
+        </ul>
+        <p class="text-center text-body-secondary">© 2023 Haonan Zhang. All Rigths Reserved</p>
+      </footer>
+    </div>
 </html>

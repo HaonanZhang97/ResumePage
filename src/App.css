@@ -1,0 +1,38 @@
+*{
+    cursor: none;
+    background-color: yellow
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.App{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+h1{
+    font-size: 4rem;
+}
+header{
+    position:absolute;
+    top: 10%;
+    left:10%;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+}
+.cursor{
+    background-color: black;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    position: absolute;
+    top:0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1000;
+}

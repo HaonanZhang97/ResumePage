@@ -19,6 +19,10 @@ header{
     position:absolute;
     top: 10%;
     left:10%;
+    font-family: 'Shadows Into Light', cursive;
+}
+header h3{
+    font-family: 'Indie Flower', cursive;
 }
 footer{
     position: absolute;
@@ -30,9 +34,19 @@ footer{
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    position: absolute;
+    position: fixed;
     top:0;
     left: 0;
     pointer-events: none;
     z-index: 1000;
+}
+.links{
+    position:absolute;
+    top:10%;
+    right:10%;
+}
+.links .icon{
+    margin: 15px;
+    width: 30px;
+    height: 30px;
 }

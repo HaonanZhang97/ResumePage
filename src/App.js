@@ -1,10 +1,14 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Header from './Component/Header';
 import Footer from './Component/Footer';
 import Links from './Component/Links';
 import MenuOverlay from './Component/MenuOverlay';
+import About from './Component/About';
+import Contact from './Component/Contact';
+import Project from './Component/Project';
 
 function App() {
   const [mousePosition, setMousePosition] = useState({
@@ -49,12 +53,30 @@ function App() {
       mixBlendMode: 'difference',
       borderRadius: '25%',
     },
+    list: {
+      x: mousePosition.x - 16,
+      y: mousePosition.y - 16,
+      backgroundColor: 'rgba(255,255,0,1)',
+      mixBlendMode: 'difference',
+    },
   };
 
   const textEnter = () => setCursorVariant('text');
   const textLeave = () => setCursorVariant('default');
   const buttonEnter = () => setCursorVariant('button');
-  console.log(navbarOpen);
+  const itemEnter = () => setCursorVariant('list');
+
+  const MenuContent = () => {
+    return (
+      <MenuOverlay
+        navbarOpen={navbarOpen}
+        setNavbarOpen={setNavbarOpen}
+        onEnter={buttonEnter}
+        onLeave={textLeave}
+        onList={itemEnter}
+      />
+    );
+  };
 
   return (
     <div className='App'>
@@ -63,20 +85,78 @@ function App() {
         variants={variants}
         animate={cursorVariant}
       />
-      {navbarOpen ? (
-        <MenuOverlay navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} />
-      ) : (
-        <div>
-          <Header onEnter={textEnter} onLeave={textLeave} />
-          <Links
-            onEnter={buttonEnter}
-            onLeave={textLeave}
-            navbarOpen={navbarOpen}
-            setNavbarOpen={setNavbarOpen}
+      <Router>
+        <Routes>
+          <Route
+            path='/'
+            element={
+              navbarOpen ? (
+                <MenuContent />
+              ) : (
+                <div>
+                  <Header onEnter={textEnter} onLeave={textLeave} />
+                  <Links
+                    onEnter={buttonEnter}
+                    onLeave={textLeave}
+                    navbarOpen={navbarOpen}
+                    setNavbarOpen={setNavbarOpen}
+                  />
+                  <Footer onEnter={textEnter} onLeave={textLeave} />
+                </div>
+              )
+            }
           />
-          <Footer onEnter={textEnter} onLeave={textLeave} />
-        </div>
-      )}
+          <Route
+            path='/about'
+            element={
+              navbarOpen ? (
+                <MenuContent />
+              ) : (
+                <About
+                  onEnter={textEnter}
+                  onLeave={textLeave}
+                  onMenu={buttonEnter}
+                  onLink={itemEnter}
+                  navbarOpen={navbarOpen}
+                  setNavbarOpen={setNavbarOpen}
+                />
+              )
+            }
+          />
+          <Route
+            path='/project'
+            element={
+              navbarOpen ? (
+                <MenuContent />
+              ) : (
+                <Project
+                  onEnter={textEnter}
+                  onLeave={textLeave}
+                  onMenu={buttonEnter}
+                  navbarOpen={navbarOpen}
+                  setNavbarOpen={setNavbarOpen}
+                />
+              )
+            }
+          />
+          <Route
+            path='/contact'
+            element={
+              navbarOpen ? (
+                <MenuContent />
+              ) : (
+                <Contact
+                  onEnter={textEnter}
+                  onLeave={textLeave}
+                  onMenu={buttonEnter}
+                  navbarOpen={navbarOpen}
+                  setNavbarOpen={setNavbarOpen}
+                />
+              )
+            }
+          />
+        </Routes>
+      </Router>
     </div>
   );
 }

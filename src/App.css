@@ -50,3 +50,78 @@ footer{
     width: 30px;
     height: 30px;
 }
+.menu {
+    font-family: 'Orbitron', sans-serif;
+}
+.closeIcon, .menuicon{
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    margin:15px;
+    width: 30px;
+    height: 30px;
+}
+.menu ul{
+    position: absolute;
+    top:20%;
+    left:20%;
+    font-size: xx-large;
+}
+.menu li{
+    margin-bottom: 50px;
+}
+.menuicon{
+    z-index: 2;
+}
+.pageTopic{
+    font-family: 'Orbitron', sans-serif;
+    margin:0;
+    padding: 0;
+}
+
+.myPic {
+    position: absolute;
+    background: url('../public/images/IMG_4235.jpg');
+    background-size: cover;
+    width: 400px;
+    height: 400px;
+    top: 15%;
+    right: 15%;
+    z-index: 1;
+    pointer-events: none;
+    border-radius: 50%;
+}
+.About .pageContent{
+    position: absolute;
+    top: 30%;
+    left: 20%;
+}
+.About hr{
+    border:2px solid black;
+}
+.About p{
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+.resume{
+    font-family: 'Indie Flower', cursive;
+    font-size: 1rem;
+    padding-bottom: 10px;
+    position: relative;
+    display: inline-block;
+    border: none;
+    margin-top: 30px;
+}
+.resume::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.175rem;
+    left: 0;
+    bottom: 0;
+    background-color: black;
+    transform: scale(0,1);
+    transition: transform 0.5s ease;
+}
+.resume:hover::after{
+    transform: scale(1,1);
+}

@@ -19,6 +19,7 @@ export default function Links(props) {
         alt='menu'
         onClick={() => {
           props.setNavbarOpen(!props.navbarOpen);
+          props.onLeave();
         }}
       />
     </div>

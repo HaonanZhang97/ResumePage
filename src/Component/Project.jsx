@@ -11,7 +11,7 @@ export default function Project({
       Project
       <img
         className='menuicon'
-        src='/images/menu.svg'
+        src='./ResumePage/images/menu.svg'
         alt='menu'
         onClick={() => {
           setNavbarOpen(!navbarOpen);

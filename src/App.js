@@ -88,7 +88,7 @@ function App() {
       <Router>
         <Routes>
           <Route
-            path='/'
+            path='/ResumePage'
             element={
               navbarOpen ? (
                 <MenuContent />

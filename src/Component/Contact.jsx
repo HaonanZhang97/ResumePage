@@ -29,7 +29,7 @@ export default function Contact(props) {
       Contact
       <img
         className='menuicon'
-        src='/images/menu.svg'
+        src='./ResumePage/images/menu.svg'
         alt='menu'
         onClick={() => {
           props.setNavbarOpen(!props.navbarOpen);

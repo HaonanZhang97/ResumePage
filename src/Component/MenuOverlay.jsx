@@ -19,7 +19,7 @@ export default function MenuOverlay({
     <div className='menu'>
       <img
         className='closeIcon'
-        src='/images/close.svg'
+        src='./ResumePage/images/close.svg'
         alt='close'
         onMouseEnter={onEnter}
         onMouseLeave={onLeave}
@@ -31,7 +31,7 @@ export default function MenuOverlay({
       <ul onMouseEnter={onList} onMouseLeave={onLeave}>
         <li
           onClick={() => {
-            handleNavigate('/');
+            handleNavigate('/ResumePage');
           }}
         >
           HOME

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function About(props) {
   const openPDF = () => {
-    window.open('/images/Haonan_Zhang.pdf');
+    window.open('./ResumePage/images/Haonan_Zhang.pdf');
   };
   return (
     <div className='About'>
@@ -37,15 +37,16 @@ export default function About(props) {
             openPDF();
           }}
         >
-          <img src='/images/downArrow.svg' alt='down arrow' />
+          <img src='./ResumePage/images/downArrow.svg' alt='down arrow' />
           My Resume
         </button>
       </div>
       <img
         className='menuicon'
-        src='/images/menu.svg'
+        src='./ResumePage/images/menu.svg'
         alt='menu'
         onMouseEnter={props.onMenu}
+        onMouseLeave={props.onLeave}
         onClick={() => {
           props.setNavbarOpen(!props.navbarOpen);
           props.onLeave();

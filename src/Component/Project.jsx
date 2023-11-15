@@ -7,8 +7,9 @@ export default function Project({
   onEnter,
 }) {
   return (
-    <div>
-      Project
+    <div className='project'>
+      <h1 className='pageTopic'>Project</h1>
+      <hr />
       <img
         className='menuicon'
         src='./ResumePage/images/menu.svg'

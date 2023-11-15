@@ -149,6 +149,7 @@ function App() {
                   onEnter={textEnter}
                   onLeave={textLeave}
                   onMenu={buttonEnter}
+                  onButton={itemEnter}
                   navbarOpen={navbarOpen}
                   setNavbarOpen={setNavbarOpen}
                 />

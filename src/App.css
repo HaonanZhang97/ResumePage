@@ -1,10 +1,14 @@
 *{
     cursor: none;
-    background-color: yellow
+    background-color: whitesmoke
 }
 body {
     margin: 0;
     padding: 0;
+    scrollbar-width: none;
+}
+body::-webkit-scrollbar {
+    display: none;
 }
 .App{
     display: flex;
@@ -81,15 +85,15 @@ footer{
 
 .myPic {
     position: absolute;
-    background: url('../public/images/IMG_4235.jpg');
+    background: url('../public/images/IMG_8865.jpg');
     background-size: cover;
     width: 400px;
-    height: 400px;
-    top: 15%;
+    height: 100%;
+    top: 0;
     right: 15%;
     z-index: 1;
     pointer-events: none;
-    border-radius: 50%;
+    /* border-radius: 50%; */
 }
 .About .pageContent{
     position: absolute;
@@ -199,4 +203,89 @@ hr{
 .contact .show{
     width: 100%;
     font-size: 1.5rem;
+}
+
+.project .out-container{
+    margin-top: 20%;
+    background-color: white;
+    width: 120vh;
+    height: 70vh;
+}
+.project .scroll-container{
+    height: 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.data-item {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.data-item .reverse .content {
+    flex-direction: row-reverse;
+}
+.data-item .item-link{
+    font-family: 'Indie Flower', cursive;
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent;
+    cursor: text;
+    border-bottom: none;
+    font-size: 1.2rem;
+}
+.data-item .description{
+    display: flex;
+    flex-direction: column;
+}
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+}
+
+.content .projectImg {
+    width: 75%;
+    /* 图片宽度 */
+    height: 75%;
+    object-fit: cover;
+    pointer-events: none;
+}
+.experience{
+    position: absolute;
+    bottom: 35%;
+    right: 10%;
+}
+.experience .scrollable{
+    height: 100%;
+    width: 70%;
+    overflow-y: auto;
+}
+.experience .title{
+    display: flex;
+    font-family: 'Orbitron', sans-serif;
+}
+.title .duration{
+    margin-left: 5%;
+}
+.experience-item ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.experience-item li{
+    margin-left: 10px;
+    margin-top: 5px;
+    border: 2px solid black;
+    padding: 0 10px 0 10px;
+    border-radius: 15%;
 }

@@ -9,6 +9,7 @@ import MenuOverlay from './Component/MenuOverlay';
 import About from './Component/About';
 import Contact from './Component/Contact';
 import Project from './Component/Project';
+import Experience from './Component/Experience';
 
 function App() {
   const [mousePosition, setMousePosition] = useState({
@@ -43,20 +44,20 @@ function App() {
       width: 120,
       x: mousePosition.x - 60,
       y: mousePosition.y - 60,
-      backgroundColor: 'rgba(255,255,0,1)',
+      backgroundColor: 'rgba(245,245,245,1)',
       mixBlendMode: 'difference',
     },
     button: {
       x: mousePosition.x - 16,
       y: mousePosition.y - 16,
-      backgroundColor: 'rgba(255,255,0,1)',
+      backgroundColor: 'rgba(245,245,245,1)',
       mixBlendMode: 'difference',
       borderRadius: '25%',
     },
     list: {
       x: mousePosition.x - 16,
       y: mousePosition.y - 16,
-      backgroundColor: 'rgba(255,255,0,1)',
+      backgroundColor: 'rgba(245,245,245,1)',
       mixBlendMode: 'difference',
     },
   };
@@ -101,6 +102,7 @@ function App() {
                     navbarOpen={navbarOpen}
                     setNavbarOpen={setNavbarOpen}
                   />
+                  <Experience onEnter={textEnter} onLeave={textLeave} />
                   <Footer onEnter={textEnter} onLeave={textLeave} />
                 </div>
               )

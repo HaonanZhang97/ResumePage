@@ -37,11 +37,7 @@ export default function Project({
                   src='./ResumePage/images/simonGame.png'
                   alt='Simon Game'
                 />
-                <div
-                  className='description'
-                  onMouseEnter={onEnter}
-                  onMouseLeave={onLeave}
-                >
+                <div className='description'>
                   <h2>Simon Game</h2>
                   <p>
                     This is a javascript project that replicate the old "Simon"
@@ -60,11 +56,7 @@ export default function Project({
               className='item-link'
             >
               <div className='content'>
-                <div
-                  className='description'
-                  onMouseEnter={onEnter}
-                  onMouseLeave={onLeave}
-                >
+                <div className='description'>
                   <h2>To Do List</h2>
                   <p>
                     This is a node.js project using ejs and html that could keep
@@ -91,11 +83,7 @@ export default function Project({
                   src='./ResumePage/images/coming-soon.jpg'
                   alt='Left'
                 />
-                <div
-                  className='description'
-                  onMouseEnter={onEnter}
-                  onMouseLeave={onLeave}
-                >
+                <div className='description'>
                   <h2>Workout Plan Generator</h2>
                   <p>
                     This is a full stack project using Reactjs for the frontend,

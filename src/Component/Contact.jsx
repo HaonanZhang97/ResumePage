@@ -64,8 +64,6 @@ export default function Contact(props) {
       </p>
       {show ? (
         <button
-          onMouseEnter={props.onButton}
-          onMouseLeave={props.onLeave}
           className='submitButton show'
           onClick={() => {
             setShow(false);
@@ -76,24 +74,13 @@ export default function Contact(props) {
       ) : sentEmail ? (
         <div>
           <form className='contactForm' ref={form} onSubmit={sendEmail}>
-            <label onMouseEnter={props.onButton} onMouseLeave={props.onLeave}>
-              Name
-            </label>
+            <label>Name</label>
             <input type='text' name='user_name' required />
-            <label onMouseEnter={props.onButton} onMouseLeave={props.onLeave}>
-              Email
-            </label>
+            <label>Email</label>
             <input type='email' name='user_email' required />
-            <label onMouseEnter={props.onButton} onMouseLeave={props.onLeave}>
-              Message
-            </label>
+            <label>Message</label>
             <textarea name='message' required />
-            <button
-              className='submitButton'
-              type='submit'
-              onMouseEnter={props.onButton}
-              onMouseLeave={props.onLeave}
-            >
+            <button className='submitButton' type='submit'>
               send
             </button>
           </form>

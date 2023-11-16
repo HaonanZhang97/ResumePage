@@ -2,8 +2,10 @@ import React from 'react';
 
 export default function Header(props) {
   return (
-    <header onMouseEnter={props.onEnter} onMouseLeave={props.onLeave}>
-      <h1>Haonan Zhang</h1>
+    <header>
+      <h1 onMouseEnter={props.onEnter} onMouseLeave={props.onLeave}>
+        Haonan Zhang
+      </h1>
       <h3>I'm a programmer</h3>
       <p>
         I'm a new grad software developer based in Ottawa, Ontario, Canada.{' '}

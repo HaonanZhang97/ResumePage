@@ -15,7 +15,7 @@ export default function About(props) {
           About
         </h1>
         <hr />
-        <p onMouseLeave={props.onLeave} onMouseEnter={props.onEnter}>
+        <p>
           Hi,My name is Haonan Zhang. I am a new grad software developer. I have
           <br />
           some project experience few popular frontend and backend frameworks

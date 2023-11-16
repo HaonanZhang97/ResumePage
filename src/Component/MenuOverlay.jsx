@@ -6,7 +6,6 @@ export default function MenuOverlay({
   setNavbarOpen,
   onEnter,
   onLeave,
-  onList,
 }) {
   const navigate = useNavigate();
   const handleNavigate = (path) => {
@@ -16,19 +15,21 @@ export default function MenuOverlay({
   };
 
   return (
-    <div className='menu'>
-      <img
-        className='closeIcon'
-        src='./ResumePage/images/close.svg'
-        alt='close'
+    <div className='menu' onMouseLeave={onLeave}>
+      <div
         onMouseEnter={onEnter}
-        onMouseLeave={onLeave}
         onClick={() => {
           setNavbarOpen(!navbarOpen);
           onLeave();
         }}
-      />
-      <ul onMouseEnter={onList} onMouseLeave={onLeave}>
+      >
+        <img
+          className='closeIcon'
+          src='./ResumePage/images/close.svg'
+          alt='close'
+        />
+      </div>
+      <ul>
         <li
           onClick={() => {
             handleNavigate('/ResumePage');

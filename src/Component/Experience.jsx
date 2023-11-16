@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function Experience({ onEnter, onLeave }) {
+export default function Experience() {
   return (
-    <div className='experience' onMouseEnter={onEnter} onMouseLeave={onLeave}>
+    <div className='experience'>
       <div className='scrollable'>
         <div className='experience-item'>
           <div className='title'>

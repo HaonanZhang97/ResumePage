@@ -17,6 +17,7 @@ function App() {
     y: 0,
   });
   const [cursorVariant, setCursorVariant] = useState('default');
+  const [circleCursor, setCircleCursor] = useState('default');
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   useEffect(() => {
@@ -36,8 +37,8 @@ function App() {
 
   const variants = {
     default: {
-      x: mousePosition.x - 16,
-      y: mousePosition.y - 16,
+      x: mousePosition.x - 4,
+      y: mousePosition.y - 4,
     },
     text: {
       height: 120,
@@ -48,35 +49,40 @@ function App() {
       mixBlendMode: 'difference',
     },
     button: {
+      height: 32,
+      width: 32,
       x: mousePosition.x - 16,
       y: mousePosition.y - 16,
       backgroundColor: 'rgba(245,245,245,1)',
       mixBlendMode: 'difference',
       borderRadius: '25%',
     },
-    list: {
-      x: mousePosition.x - 16,
-      y: mousePosition.y - 16,
-      backgroundColor: 'rgba(245,245,245,1)',
-      mixBlendMode: 'difference',
+  };
+  const circleVariants = {
+    default: {
+      x: mousePosition.x - 17,
+      y: mousePosition.y - 17,
+      transition: { duration: 0.05 },
+    },
+    disappear: {
+      x: mousePosition.x - 17,
+      y: mousePosition.y - 17,
+      borderColor: 'rgba(0, 0, 0, 0)',
     },
   };
 
-  const textEnter = () => setCursorVariant('text');
-  const textLeave = () => setCursorVariant('default');
-  const buttonEnter = () => setCursorVariant('button');
-  const itemEnter = () => setCursorVariant('list');
-
-  const MenuContent = () => {
-    return (
-      <MenuOverlay
-        navbarOpen={navbarOpen}
-        setNavbarOpen={setNavbarOpen}
-        onEnter={buttonEnter}
-        onLeave={textLeave}
-        onList={itemEnter}
-      />
-    );
+  const textEnter = () => {
+    setCursorVariant('text');
+    setCircleCursor('disappear');
+  };
+  const textLeave = () => {
+    console.log('BBB');
+    setCursorVariant('default');
+    setCircleCursor('default');
+  };
+  const buttonEnter = () => {
+    setCursorVariant('button');
+    setCircleCursor('disappear');
   };
 
   return (
@@ -86,13 +92,23 @@ function App() {
         variants={variants}
         animate={cursorVariant}
       />
+      <motion.div
+        className='circle'
+        variants={circleVariants}
+        animate={circleCursor}
+      />
       <Router>
         <Routes>
           <Route
             path='/ResumePage'
             element={
               navbarOpen ? (
-                <MenuContent />
+                <MenuOverlay
+                  navbarOpen={navbarOpen}
+                  setNavbarOpen={setNavbarOpen}
+                  onEnter={buttonEnter}
+                  onLeave={textLeave}
+                />
               ) : (
                 <div>
                   <Header onEnter={textEnter} onLeave={textLeave} />
@@ -112,13 +128,18 @@ function App() {
             path='/about'
             element={
               navbarOpen ? (
-                <MenuContent />
+                <MenuOverlay
+                  navbarOpen={navbarOpen}
+                  setNavbarOpen={setNavbarOpen}
+                  onEnter={buttonEnter}
+                  onLeave={textLeave}
+                />
               ) : (
                 <About
                   onEnter={textEnter}
                   onLeave={textLeave}
                   onMenu={buttonEnter}
-                  onLink={itemEnter}
+                  // onLink={itemEnter}
                   navbarOpen={navbarOpen}
                   setNavbarOpen={setNavbarOpen}
                 />
@@ -129,7 +150,12 @@ function App() {
             path='/project'
             element={
               navbarOpen ? (
-                <MenuContent />
+                <MenuOverlay
+                  navbarOpen={navbarOpen}
+                  setNavbarOpen={setNavbarOpen}
+                  onEnter={buttonEnter}
+                  onLeave={textLeave}
+                />
               ) : (
                 <Project
                   onEnter={textEnter}
@@ -145,13 +171,17 @@ function App() {
             path='/contact'
             element={
               navbarOpen ? (
-                <MenuContent />
+                <MenuOverlay
+                  navbarOpen={navbarOpen}
+                  setNavbarOpen={setNavbarOpen}
+                  onEnter={buttonEnter}
+                  onLeave={textLeave}
+                />
               ) : (
                 <Contact
                   onEnter={textEnter}
                   onLeave={textLeave}
                   onMenu={buttonEnter}
-                  onButton={itemEnter}
                   navbarOpen={navbarOpen}
                   setNavbarOpen={setNavbarOpen}
                 />

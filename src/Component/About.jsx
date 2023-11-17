@@ -16,23 +16,27 @@ export default function About(props) {
         </h1>
         <hr />
         <p>
-          Hi,My name is Haonan Zhang. I am a new grad software developer. I have
-          <br />
-          some project experience few popular frontend and backend frameworks
-          such
-          <br />
-          as Reactjs, Bootstrap, Node.js, Springboot. As well as few popular
-          <br />
-          databases such as postgreSQL, mySQL, mongoDB. I am a fast leaner,
-          <br />
-          passionate about creating things with code and always curious to learn
-          <br />
-          more when it comes to new technologies.
+          Hi,My name is Haonan Zhang. I am a new grad software developer.
+          <br />I am holding a Master of System Science degree from the
+          University of Ottawa and <br /> a Honours Bachelor of Science degree
+          ,from Carleton University majoring in computer <br />
+          science. Entertaining extensive computer science studies from my
+          education and the <br />
+          eye-opening experience to work in various software development
+          internship roles <br />
+          within the IT industry, I gained the rewarding experience to
+          participate in various <br />
+          software development activities such as web development, software
+          testing, relational <br />
+          database management, etc., which made me recognize the power of
+          software <br />
+          programming as it helped me overcome many cutting-edging technological{' '}
+          issues in <br />a real-world situation, where my strong interests and
+          curiosity in software development <br />
+          started to accumulate, especially web development.
         </p>
         <button
           className='resume'
-          onMouseEnter={props.onLink}
-          onMouseLeave={props.onLeave}
           onClick={() => {
             openPDF();
           }}

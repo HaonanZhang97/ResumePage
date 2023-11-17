@@ -139,7 +139,6 @@ function App() {
                   onEnter={textEnter}
                   onLeave={textLeave}
                   onMenu={buttonEnter}
-                  // onLink={itemEnter}
                   navbarOpen={navbarOpen}
                   setNavbarOpen={setNavbarOpen}
                 />

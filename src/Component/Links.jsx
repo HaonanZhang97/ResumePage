@@ -22,7 +22,7 @@ export default function Links(props) {
         />
       </a>
       <img
-        className='icon'
+        className='icon menu'
         src='./ResumePage/images/menu.svg'
         alt='menu'
         onClick={() => {

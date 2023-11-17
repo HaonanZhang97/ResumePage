@@ -8,8 +8,7 @@ export default function Header(props) {
       </h1>
       <h2> Welcome to my world!</h2>
       <p>
-        I'm a new grad software developer based in Ottawa, Ontario, Canada.{' '}
-        <br />
+        I'm a software developer based in Ottawa, Ontario, Canada. <br />
         I am looking for frontend, backend, full stack, QA, Testing jobs. <br />
         I would like to describe myself as an industrious, <br />
         self-motivated person at work. Also, I have exemplified <br />

@@ -16,7 +16,7 @@ export default function About(props) {
         </h1>
         <hr />
         <p>
-          Hi,My name is Haonan Zhang. I am a new grad software developer.
+          Hi,My name is Haonan Zhang.
           <br />I am holding a Master of System Science degree from the
           University of Ottawa and <br /> a Honours Bachelor of Science degree
           ,from Carleton University majoring in computer <br />

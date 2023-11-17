@@ -37,9 +37,10 @@ header h1{
     font-family: 'Orbitron', sans-serif;
     margin-bottom: 0;
 }
-header h3{
+header h2{
     font-family: 'Indie Flower', cursive;
     margin: 0;
+    font-size: 2rem;
 }
 header a{
     font-family: 'Indie Flower', cursive;
@@ -285,7 +286,6 @@ hr{
 
 .project .out-container{
     margin-top: 20%;
-    background-color: white;
     width: 120vh;
     height: 70vh;
 }

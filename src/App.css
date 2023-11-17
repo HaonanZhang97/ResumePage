@@ -1,7 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 *{
     cursor: none;
-    background-color: whitesmoke;
-    /* background: ; */
 }
 body {
     margin: 0;
@@ -16,6 +17,9 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    /* background: url(../public/images/lightBG.jpeg); */
+    background: radial-gradient(circle at left top, #FFD700, #FFFFFF);
+    color: black;
 }
 h1{
     font-size: 4rem;
@@ -98,13 +102,16 @@ footer{
     align-items: flex-end;
 }
 .links .icon{
-    margin: 15px;
+    margin-right: 30px;
     width: 30px;
     height: 30px;
 }
-.links .menu{
+
+.links>.menuIcon{
     width: 55px;
     height: 55px;
+    padding: 0;
+    object-fit: contain;
 }
 .menu {
     font-family: 'Orbitron', sans-serif;

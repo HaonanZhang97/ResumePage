@@ -45,7 +45,7 @@ function App() {
       width: 120,
       x: mousePosition.x - 60,
       y: mousePosition.y - 60,
-      backgroundColor: 'rgba(245,245,245,1)',
+      backgroundColor: 'rgba(245,245,245,0.2)',
       mixBlendMode: 'difference',
     },
     button: {
@@ -60,13 +60,13 @@ function App() {
   };
   const circleVariants = {
     default: {
-      x: mousePosition.x - 17,
-      y: mousePosition.y - 17,
+      x: mousePosition.x - 16.5,
+      y: mousePosition.y - 16.5,
       transition: { duration: 0.05 },
     },
     disappear: {
-      x: mousePosition.x - 17,
-      y: mousePosition.y - 17,
+      x: mousePosition.x - 16.5,
+      y: mousePosition.y - 16.5,
       borderColor: 'rgba(0, 0, 0, 0)',
     },
   };
@@ -76,7 +76,6 @@ function App() {
     setCircleCursor('disappear');
   };
   const textLeave = () => {
-    console.log('BBB');
     setCursorVariant('default');
     setCircleCursor('default');
   };

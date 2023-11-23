@@ -38,7 +38,7 @@ export default function Contact(props) {
       </h1>
       <hr />
       <img
-        className='menuicon'
+        className={`menuicon ${props.theme === 'dark' ? 'dark' : ''}`}
         src='./ResumePage/images/menu.svg'
         alt='menu'
         onMouseEnter={props.onMenu}

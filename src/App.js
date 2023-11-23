@@ -152,6 +152,7 @@ function App() {
                     onLeave={textLeave}
                     navbarOpen={navbarOpen}
                     setNavbarOpen={setNavbarOpen}
+                    theme={theme}
                   />
                   <Experience theme={theme} />
                   <Footer onEnter={textEnter} onLeave={textLeave} />
@@ -202,6 +203,7 @@ function App() {
                   onMenu={buttonEnter}
                   navbarOpen={navbarOpen}
                   setNavbarOpen={setNavbarOpen}
+                  theme={theme}
                 />
               )
             }

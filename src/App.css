@@ -20,13 +20,10 @@ body::-webkit-scrollbar {
     height: 100vh;
     background: radial-gradient(circle at left top, #FFD700, #FFFFFF);
     color: black;
+    transition: color 1s ease;
 }
 .dark .App{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(11, 43, 6, 1) 35%, rgba(33, 9, 66, 1) 100%);
+    background: radial-gradient(circle at right bottom, rgba(0, 0, 0, 1) 0%, rgba(11, 43, 6, 1) 35%, rgba(33, 9, 66, 1) 100%);
     color: whitesmoke;
 
 }
@@ -61,6 +58,10 @@ header a{
     border: none;
     margin: 30px 30px 0 0;
     text-decoration: none;
+    color:black;
+}
+.dark header a{
+    color:whitesmoke;
 }
 header a::after{
     content: "";
@@ -74,18 +75,13 @@ header a::after{
     transition: transform 0.5s ease;
 }
 .dark header a::after{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 0.175rem;
-    left: 0;
-    bottom: 0;
     background-color: white;
-    transform: scale(0, 1);
-    transition: transform 0.5s ease;
 }
 header a:hover::after{
     transform: scale(1, 1);
+}
+.dark img:not(.projectImg){
+    filter:invert(100%) brightness(200%); 
 }
 footer{
     position: absolute;
@@ -134,6 +130,12 @@ footer{
     height: 55px;
     padding: 0;
     object-fit: contain;
+}
+.dark .menuIcon,.dark .menuicon{
+    filter:invert(100%) brightness(200%)
+}
+.dark .links .icon{
+    filter: invert(100%) brightness(200%)
 }
 .menu {
     font-family: 'Orbitron', sans-serif;
@@ -237,6 +239,10 @@ hr{
     display: inline-flex;
     border: none;
     margin-top: 30px;
+    background-color: transparent;
+}
+.dark .resume{
+    color: whitesmoke;
 }
 .resume::after{
     content: "";
@@ -250,15 +256,7 @@ hr{
     transition: transform 0.5s ease;
 }
 .dark .resume::after{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 0.175rem;
-    left: 0;
-    bottom: 0;
     background-color: whitesmoke;
-    transform: scale(0, 1);
-    transition: transform 0.5s ease;
 }
 .resume:hover::after{
     transform: scale(1,1);
@@ -302,8 +300,11 @@ hr{
     border: none;
     margin-top: 10px;
     width: 50%;
+    background-color: transparent;
 }
-
+.dark .submitButton{
+    color: whitesmoke;
+}
 .submitButton::after {
     content: "";
     position: absolute;
@@ -316,15 +317,7 @@ hr{
     transition: transform 0.5s ease;
 }
 .dark .submitButton::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 0.175rem;
-    left: 0;
-    bottom: 0;
     background-color: whitesmoke;
-    transform: scale(0, 1);
-    transition: transform 0.5s ease;
 }
 
 .submitButton:hover::after {
@@ -401,6 +394,7 @@ hr{
     object-fit: cover;
     pointer-events: none;
 }
+
 .experience{
     position: absolute;
     bottom: 35%;

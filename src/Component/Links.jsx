@@ -9,20 +9,20 @@ export default function Links(props) {
     >
       <a href='https://www.linkedin.com/in/haonan-zhang-233605200/'>
         <img
-          className='icon'
+          className={`icon ${props.theme === 'dark' ? 'dark' : ''}`}
           src='./ResumePage/images/linkedin.svg'
           alt='linkedin'
         />
       </a>
       <a href='https://github.com/HaonanZhang97'>
         <img
-          className='icon'
+          className={`icon ${props.theme === 'dark' ? 'dark' : ''}`}
           src='./ResumePage/images/github.svg'
           alt='github'
         />
       </a>
       <img
-        className='menuIcon'
+        className={`menuIcon ${props.theme === 'dark' ? 'dark' : ''}`}
         src='./ResumePage/images/menu.svg'
         alt='menu'
         onClick={() => {

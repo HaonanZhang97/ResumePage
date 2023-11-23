@@ -6,6 +6,7 @@ export default function Project({
   onLeave,
   onEnter,
   onMenu,
+  theme,
 }) {
   return (
     <div className='project'>
@@ -14,7 +15,7 @@ export default function Project({
       </h1>
       <hr />
       <img
-        className='menuicon'
+        className={`menuicon ${theme === 'dark' ? 'dark' : ''}`}
         src='./ResumePage/images/menu.svg'
         alt='menu'
         onMouseEnter={onMenu}

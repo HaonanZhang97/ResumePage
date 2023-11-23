@@ -64,7 +64,9 @@ export default function Contact(props) {
       </p>
       {show ? (
         <button
-          className='submitButton show'
+          className={`submitButton show ${
+            props.theme === 'dark' ? 'dark' : ''
+          }`}
           onClick={() => {
             setShow(false);
           }}

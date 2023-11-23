@@ -14,7 +14,7 @@ export default function About(props) {
         >
           About
         </h1>
-        <hr />
+        <hr className={`${props.theme === 'dark' ? 'dark' : ''}`} />
         <p>
           Hi,My name is Haonan Zhang.
           <br />I am holding a Master of System Science degree from the
@@ -36,7 +36,7 @@ export default function About(props) {
           started to accumulate, especially web development.
         </p>
         <button
-          className='resume'
+          className={`resume ${props.theme === 'dark' ? 'dark' : ''}`}
           onClick={() => {
             openPDF();
           }}

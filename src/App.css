@@ -12,14 +12,23 @@ body {
 body::-webkit-scrollbar {
     display: none;
 }
+
 .App{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /* background: url(../public/images/lightBG.jpeg); */
     background: radial-gradient(circle at left top, #FFD700, #FFFFFF);
     color: black;
+}
+.dark .App{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(11, 43, 6, 1) 35%, rgba(33, 9, 66, 1) 100%);
+    color: whitesmoke;
+
 }
 h1{
     font-size: 4rem;
@@ -47,11 +56,11 @@ header a{
     font-size: 1.25rem;
     padding-bottom: 10px;
     position: relative;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     border: none;
     margin: 30px 30px 0 0;
     text-decoration: none;
-    color: black;
 }
 header a::after{
     content: "";
@@ -61,6 +70,17 @@ header a::after{
     left: 0;
     bottom: 0;
     background-color: black;
+    transform: scale(0, 1);
+    transition: transform 0.5s ease;
+}
+.dark header a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.175rem;
+    left: 0;
+    bottom: 0;
+    background-color: white;
     transform: scale(0, 1);
     transition: transform 0.5s ease;
 }
@@ -95,6 +115,7 @@ footer{
     pointer-events: none;
     z-index: 1000;
 }
+
 .links{
     position:absolute;
     top:10%;
@@ -126,6 +147,15 @@ footer{
     height: 55px;
 
 }
+.menuButton{
+    position: absolute;
+    top: 10%;
+    right: 15%;
+    padding-top: 15px;
+    margin: 15px;
+    width: 40px;
+    height: 40px;
+}
 .menu ul{
     position: absolute;
     top:20%;
@@ -146,6 +176,17 @@ footer{
     left: 0;
     bottom: 0;
     background-color: black;
+    transform: scale(0, 1);
+    transition: transform 0.5s ease;
+}
+.dark .menu li::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.175rem;
+    left: 0;
+    bottom: 0;
+    background-color: whitesmoke;
     transform: scale(0, 1);
     transition: transform 0.5s ease;
 }
@@ -182,6 +223,9 @@ footer{
 hr{
     border:2px solid black;
 }
+.dark hr{
+    border:2px solid whitesmoke;
+}
 .About p{
     font-family: 'Montserrat Alternates', sans-serif;
 }
@@ -190,7 +234,7 @@ hr{
     font-size: 1.25rem;
     padding-bottom: 10px;
     position: relative;
-    display: inline-block;
+    display: inline-flex;
     border: none;
     margin-top: 30px;
 }
@@ -203,6 +247,17 @@ hr{
     bottom: 0;
     background-color: black;
     transform: scale(0,1);
+    transition: transform 0.5s ease;
+}
+.dark .resume::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.175rem;
+    left: 0;
+    bottom: 0;
+    background-color: whitesmoke;
+    transform: scale(0, 1);
     transition: transform 0.5s ease;
 }
 .resume:hover::after{
@@ -257,6 +312,17 @@ hr{
     left: 0;
     bottom: 0;
     background-color: black;
+    transform: scale(0, 1);
+    transition: transform 0.5s ease;
+}
+.dark .submitButton::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.175rem;
+    left: 0;
+    bottom: 0;
+    background-color: whitesmoke;
     transform: scale(0, 1);
     transition: transform 0.5s ease;
 }
@@ -363,6 +429,13 @@ hr{
     margin-left: 10px;
     margin-top: 5px;
     border: 2px solid black;
+    padding: 0 10px 0 10px;
+    border-radius: 15%;
+}
+.dark .experience-item li{
+    margin-left: 10px;
+    margin-top: 5px;
+    border: 2px solid white;
     padding: 0 10px 0 10px;
     border-radius: 15%;
 }

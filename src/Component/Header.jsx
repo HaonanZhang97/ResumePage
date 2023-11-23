@@ -16,11 +16,11 @@ export default function Header(props) {
         with difficult problems. Want to hear more?
       </p>
 
-      <a href='/about'>
+      <a className={`${props.theme === 'dark' ? 'dark' : ''}`} href='/about'>
         <img src='./ResumePage/images/rightArrow.svg' alt='right arrow' />
         Read my full story
       </a>
-      <a href='/project'>
+      <a className={`${props.theme === 'dark' ? 'dark' : ''}`} href='/project'>
         <img src='./ResumePage/images/rightArrow.svg' alt='right arrow' />
         Projects
       </a>

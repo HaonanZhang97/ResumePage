@@ -1,10 +1,10 @@
 import React from 'react';
 
-export default function Experience() {
+export default function Experience({ theme }) {
   return (
     <div className='experience'>
       <div className='scrollable'>
-        <div className='experience-item'>
+        <div className={`experience-item ${theme === 'dark' ? 'dark' : ''}`}>
           <div className='title'>
             <h3>Software Engineer</h3>
             <h5 className='duration'> May, 2023 - Present</h5>
@@ -19,7 +19,7 @@ export default function Experience() {
             <li>Springboot</li>
           </ul>
         </div>
-        <div className='experience-item'>
+        <div className={`experience-item ${theme === 'dark' ? 'dark' : ''}`}>
           <div className='title'>
             <h3>Software Developer Intern</h3>
             <h5 className='duration'> May, 2022 - Aug. 2022</h5>

@@ -19,6 +19,7 @@ function App() {
   const [cursorVariant, setCursorVariant] = useState('default');
   const [circleCursor, setCircleCursor] = useState('default');
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const [theme, setTheme] = useState('light');
 
   useEffect(() => {
     const mouseMove = (e) => {
@@ -34,6 +35,18 @@ function App() {
       window.removeEventListener('mousemove', mouseMove);
     };
   }, []);
+
+  useEffect(() => {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+      setCircleCursor('dark');
+      setCursorVariant('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      setCursorVariant('default');
+      setCircleCursor('default');
+    }
+  }, [theme]);
 
   const variants = {
     default: {
@@ -57,6 +70,11 @@ function App() {
       mixBlendMode: 'difference',
       borderRadius: '25%',
     },
+    dark: {
+      x: mousePosition.x - 4,
+      y: mousePosition.y - 4,
+      backgroundColor: 'rgba(255,255,255,1)',
+    },
   };
   const circleVariants = {
     default: {
@@ -69,23 +87,39 @@ function App() {
       y: mousePosition.y - 16.5,
       borderColor: 'rgba(0, 0, 0, 0)',
     },
+    dark: {
+      x: mousePosition.x - 16.5,
+      y: mousePosition.y - 16.5,
+      transition: { duration: 0.05 },
+      borderColor: 'rgba(255,255,255,1)',
+    },
   };
 
   const textEnter = () => {
-    setCursorVariant('text');
-    setCircleCursor('disappear');
+    if (theme === 'light') {
+      setCursorVariant('text');
+      setCircleCursor('disappear');
+    }
   };
   const textLeave = () => {
-    setCursorVariant('default');
-    setCircleCursor('default');
+    if (theme === 'light') {
+      setCursorVariant('default');
+      setCircleCursor('default');
+    }
   };
   const buttonEnter = () => {
-    setCursorVariant('button');
-    setCircleCursor('disappear');
+    if (theme === 'light') {
+      setCursorVariant('button');
+      setCircleCursor('disappear');
+    }
+  };
+
+  const handleSwitch = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
   };
 
   return (
-    <div className='App'>
+    <div className={`App ${theme === 'dark' ? 'dark' : ''}`}>
       <motion.div
         className='cursor'
         variants={variants}
@@ -107,6 +141,8 @@ function App() {
                   setNavbarOpen={setNavbarOpen}
                   onEnter={buttonEnter}
                   onLeave={textLeave}
+                  toggleTheme={handleSwitch}
+                  theme={theme}
                 />
               ) : (
                 <div>
@@ -117,7 +153,7 @@ function App() {
                     navbarOpen={navbarOpen}
                     setNavbarOpen={setNavbarOpen}
                   />
-                  <Experience onEnter={textEnter} onLeave={textLeave} />
+                  <Experience theme={theme} />
                   <Footer onEnter={textEnter} onLeave={textLeave} />
                 </div>
               )
@@ -132,6 +168,8 @@ function App() {
                   setNavbarOpen={setNavbarOpen}
                   onEnter={buttonEnter}
                   onLeave={textLeave}
+                  toggleTheme={handleSwitch}
+                  theme={theme}
                 />
               ) : (
                 <About
@@ -140,6 +178,7 @@ function App() {
                   onMenu={buttonEnter}
                   navbarOpen={navbarOpen}
                   setNavbarOpen={setNavbarOpen}
+                  theme={theme}
                 />
               )
             }
@@ -153,6 +192,8 @@ function App() {
                   setNavbarOpen={setNavbarOpen}
                   onEnter={buttonEnter}
                   onLeave={textLeave}
+                  toggleTheme={handleSwitch}
+                  theme={theme}
                 />
               ) : (
                 <Project
@@ -174,6 +215,8 @@ function App() {
                   setNavbarOpen={setNavbarOpen}
                   onEnter={buttonEnter}
                   onLeave={textLeave}
+                  toggleTheme={handleSwitch}
+                  theme={theme}
                 />
               ) : (
                 <Contact
@@ -182,6 +225,7 @@ function App() {
                   onMenu={buttonEnter}
                   navbarOpen={navbarOpen}
                   setNavbarOpen={setNavbarOpen}
+                  theme={theme}
                 />
               )
             }
